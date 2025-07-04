@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+<body>
+
+<h1>The Navigator Object</h1>
+<h2>The appName Property</h2>
+
+<p>The appName property is removed (deprecated) in the latest web standard.
+Most browsers (Chrome, Edge, Firefox, Safari) returns Netscape as the appName:</p>
+
+<p id="demo"></p>
+
+<script>
+localStorage.setItem("name", "John Doe");
+localStorage.getItem("name");
+document.getElementById("demo").innerText=localStorage.getItem("name")
+</script>
+
+</body>
+</html>
