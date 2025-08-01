@@ -1,61 +1,111 @@
-import { Button1, Button2 } from "./components/button.jsx";
-import Mutton from "./components/button.jsx";
-import Login from "./components/Loging.jsx";
-import Profile from "./components/Profile.jsx";
-const App = () => {
-  // const name = "Palovon";
-  const data = [
-    { id: 1, name: "Palovon", age: 30, email: "plavan@gmail.com" },
-    {
-      id: 2,
-      name: "Mrinmoy",
-      age: 60,
-      email: "mrinmoy@gmail.com",
-      maragechualStatus: "married",
-    },
-  ];
-  // const isLogin = true;
-  return (
-    <>
-      {/* <button>Normal Button</button>
-    <Mutton/>
-    <Button1/>
-    <Button2/> */}
-      {/* <Login fname="Palovon"/> */}
-      {/* {isLogin && <h1>Wellcome to Our Page</h1>}
-      {isLogin || <h1>Please Login</h1>} */}
-      {/* {data.length > 0 &&
-        data.map((user) => (
-          <ul key={user.id}>
-            <li>{user.name}</li>
-            <li>{user.age}</li>
-            <li>{user.email}</li>
-            <li>{user?.maragechualStatus || "Not Mentioned"}</li>
-          </ul>
-        ))} */}
+// import React, { useReducer } from 'react'
+// import MyCallback from './components/Callback'
+// import MyMemo from './components/UseMemo'
+// import MyuseEffects from './components/MyuseEffects'
+// import {useApiCall} from './components/CustomHooks/useApicalling'
+// import { ToastContainer } from 'react-toastify'
+// import Regisiter from './pages/form/Formtype2'
+// import FormbyFormik from './pages/form/FormbyFormik'
+// import {NestedExample} from "./pages/form/Multiple"
+// import Regisiter2 from './pages/form/UsingFormData'
+// import Zpp from './pages/form/MyUseForm'
 
-      <table border={1}>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Email</th>
-            <th>Marital Status</th>
-          </tr>
-        </thead>
-        <tbody>
-        {data.length > 0 &&
-          data.map((user) => (
-            <tr key={user.id}>
-              <td>{user.name}</td>
-              <td>{user.age}</td>
-              <td>{user.email}</td>
-              <td>{user?.maragechualStatus || "Not Mentioned"}</td>
-            </tr>
-          ))}
-          </tbody>
-      </table>
-    </>
+// import CounterReduser from './features/counter/counterSlice'
+// import { useSelector } from 'react-redux'
+// useSelector
+// const App = () => {
+//   const data = useReducer((state)=>state.counter.value)
+//   //  const data =useApiCall("https://jsonplaceholder.typicode.com/posts")
+//   return (
+
+//     // <>
+//     // {data && data.length>0 && data.map((item,index)=>
+//     //   <div key={index}>{item.title}</div>
+//     // )}
+//     // </>
+
+//     // <>
+//     //   <h1>My All Data</h1>
+//     //   {data && data.length>0 && data.map((item,index)=>{
+//     //     return(
+//     //         <div key={index}>{item.title}</div>
+//     //     )
+//     //   })}
+
+//     // </>
+//     <>
+//    {data}
+
+//        {/* <ToastContainer /> */}
+//     {/* <Regisiter2/> */}
+//     {/* <Zpp/> */}
+//     {/* <NestedExample/> */}
+//     </>
+//   )
+// }
+
+// export default App
+// import React from 'react'
+// import { useSelector,useDispatch } from 'react-redux'
+// import { inc,dec,incByvalue } from './features/counter/counterSlice'
+// const App = () => {
+//   const data = useSelector((state)=>state.counter.value)
+//   const productData = useSelector((state)=>state.product)
+//   console.log(productData);
+
+//   console.log(data);
+//   const dispath =useDispatch();
+
+//   return (
+//     <div>App :{data}
+//     <button onClick={()=>dispath(inc())}>Increment</button>
+//     <button>Decrement</button>
+//     <button onClick={()=>dispath(incByvalue(30))}>Inc by 30 value</button>
+//     </div>
+//   )
+// }
+
+// export default App
+// import React from "react";
+// import { useSelector, useDispatch } from "react-redux";
+// import { AddData, GetData } from "./features/product/productSclice";
+// const App = () => {
+//   const dipatch = useDispatch();
+//   const ProductData = useSelector((state) => state.product);
+//   console.log(ProductData);
+//   const AddDataMydata = () => {
+//     dipatch(
+//       AddData({
+//         pname: "Asus Rog G15",
+//         pprice: 70000,
+//         pquantity: 5,
+//         pdec: "This is Gaming Laptop",
+//       })
+//     );
+//   };
+//   return (
+//     <div>
+//       {ProductData && ProductData.pname}
+
+//       <button onClick={AddDataMydata}>Click to Add Data</button>
+//     </div>
+//   );
+// };
+
+// export default App;
+import React from "react";
+import { useSelector } from "react-redux";
+import RegForm from "./pages/form/Formtype2";
+const App = () => {
+  const userData = useSelector((state) => state.signupform);
+  return (
+    <div>
+      <h1>Show My Data</h1>
+      {userData && userData.name}
+
+      <RegForm />
+    </div>
   );
 };
+
 export default App;
