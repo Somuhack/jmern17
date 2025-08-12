@@ -1,23 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import "../../assets/dashboard.css";
 
 export const DashBoard = () => {
   return (
     <>
-      <h1>Wellcone to my dashboard</h1>
-      <NavLink
-        className={({ isA }) => (isA ? "" : "myactive")}
-        to={"/admin/acounts"}
-      >
-        Acounts
-      </NavLink>
-      <NavLink
-        className={({ isA }) => (isA ? "" : "myactive")}
-        to={"/admin/review"}
-      >
-        Review
-      </NavLink>
+      <h1>Welcome to my dashboard</h1>
+      <nav>
+        <NavLink
+          className={({ isActive }) => (isActive ? "myactive" : "")}
+          to="/admin/accounts"
+        >
+          Accounts
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "myactive" : "")}
+          to="/admin/review"
+        >
+          Review
+        </NavLink>
+      </nav>
       <Outlet />
     </>
   );

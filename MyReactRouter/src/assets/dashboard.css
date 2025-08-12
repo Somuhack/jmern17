@@ -1,3 +1,23 @@
-.myactive{
-    background-color: aqua;
+nav a{
+  padding: 8px;
+  display: inline-block;
+  margin: 4px;
+  text-decoration: none;
+}
+.myactive {
+  background-color: aqua;
+}
+.myactive::before{
+    color: #ffffff;
+}
+.myactive:active{
+    color: rgb(255, 255, 255);
+}
+/* .myactive::after {
+ 
+  background-color: rgb(255, 127, 127);
+} */
+
+nav a:active {
+  color: black; /* Inherit from parent instead of red */
 }

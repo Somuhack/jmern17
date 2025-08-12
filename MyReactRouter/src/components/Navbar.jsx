@@ -1,16 +1,38 @@
-import React from 'react'
-import "../assets/Navbar.css"
-import { Link,NavLink } from 'react-router-dom'
+import React from 'react';
+import "../assets/Navbar.css";
+import { NavLink } from 'react-router-dom';
+
 const Navbar = () => {
   return (
-    <nav className='nav '>
-      <ul className='all-list-items'>
-        <l1 className="list-item"><NavLink activeClassName="active" className="nav-item" to={"/"}>Home</NavLink></l1>
-        <l1 className="list-item"><NavLink activeClassName="active" className="nav-item" to={"/login"}>Login</NavLink></l1>
-        <l1 className="list-item"><NavLink activeClassName="active" className="nav-item" to={"/register"}>Sign up</NavLink></l1>
+    <nav className="nav">
+      <ul className="all-list-items">
+        <li className="list-item">
+          <NavLink 
+            to="/"
+            className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}
+          >
+            Home
+          </NavLink>
+        </li>
+        <li className="list-item">
+          <NavLink 
+            to="/login"
+            className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}
+          >
+            Login
+          </NavLink>
+        </li>
+        <li className="list-item">
+          <NavLink 
+            to="/register"
+            className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}
+          >
+            Sign up
+          </NavLink>
+        </li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
