@@ -20,6 +20,7 @@ const Footer = () => {
             Making the world a better place through<br/> constructing elegant
             hierarchies.
           </p>
+          {/* Hello */}
           <div className="flex gap-4 mt-8">
             <div className="text-2xl">
               {" "}
