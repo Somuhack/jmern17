@@ -6,10 +6,10 @@ import { FaGithub } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="bg-blue-950 text-gray-400 w-screen 
-                        grid grid-rows-4 h-[600px]
+    <footer className="bg-blue-950 text-gray-400 max-w-screen min-w-[370px]
+                        grid grid-rows-4 h-[570px]
                         max-2xl:grid max-2xl:grid-rows-2 px-10 
-                        sm:grid sm:grid-rows-4 sm:h-[550px] sm:pt-2
+                        sm:grid sm:grid-rows-4 sm:h-[570px] sm:pt-2
                         md:grid md:grid-rows-3 md:h-[450px] 
                        lg:grid lg:grid-rows-2 lg:px-10 lg:h-[400px] ">
       <div className="grid grid-cols-2 gap-2
@@ -78,7 +78,7 @@ const Footer = () => {
           <p>License</p>
         </div>
       </div>
-      <div className="font-bold lg:mt-1 lg:mb-7 md:mt-55 sm:mt-85 mt-55">
+      <div className="font-bold lg:mt-1 lg:mb-7 md:mt-55 sm:mt-93 mt-55">
       <hr className="text-gray-600" />
         © 2024 Your Company, Inc. All rights reserved.
       </div>
