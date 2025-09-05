@@ -11,11 +11,11 @@ const Footer = () => {
                         max-2xl:grid max-2xl:grid-rows-2 px-10 
                         sm:grid sm:grid-rows-4 sm:h-[570px] sm:pt-2
                         md:grid md:grid-rows-3 md:h-[450px] 
-                       lg:grid lg:grid-rows-2 lg:px-10 lg:h-[400px] ">
+                       lg:grid lg:grid-rows-2 lg:px-10 lg:h-[300px] ">
       <div className="grid grid-cols-2 gap-2
                       sm:grid sm:grid-cols-2 sm:gap-2
                       md:grid md:grid-cols-4 md:gap-2 
-                      lg:grid lg:grid-cols-6 lg:row-span-2 lg:py-15">
+                      lg:grid lg:grid-cols-6 lg:row-span-2 lg:py-5">
         <div className="lg:col-span-2 md:col-span-4 sm:col-span-2 col-span-2 mb-2">
           <div className="flex shrink-0 items-center">
             <img
@@ -50,7 +50,7 @@ const Footer = () => {
           <div></div>
         </div>
         <div className="grid grid-rows-6">
-          <h1 className="text-xl font-bold text-gray-50">Solutions</h1>
+          <h1 className="text-xl font-bold text-gray-50 ">Solutions</h1>
           <p>Marketing</p>
           <p>Analytics</p>
           <p>Automation</p>
